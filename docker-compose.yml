@@ -7,3 +7,10 @@ services:
     tty: true
     volumes:
       - ./workspace:/root/workspace
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./workspace/app:/root/workspace/app
